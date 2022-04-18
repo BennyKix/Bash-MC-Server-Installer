@@ -84,9 +84,7 @@ fi
 sudo ufw allow 25565;
 if [[ $(command -v java) ]]; then
     echo "Java already installed, skipping that part.";
-fi
-
-if [![ $(command -v java) ]]; then
+else
     echo "You haven't installed Java! I'm about to change that.";
     sudo add-apt-repository ppa:openjdk-r/ppa;
     sudo apt update;
