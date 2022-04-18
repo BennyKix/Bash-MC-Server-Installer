@@ -27,11 +27,12 @@ then
   wget https://dl.dropboxusercontent.com/s/40j5zvzunf98drg/hyperserver2.zip;
   unzip hyperserver2.zip;
   rm hyperserver2.zip;
-  echo "Install Village Spawnpoint? [y/n]";
+  echo "Install Village Spawnpoint? (Mod that, on world creation, sets the spawnpoint to the village closest to 0,0)[y/n]";
   read hsvs;
   if [ $hsvs = y ] || [$hsvs = Y]
   then
     wget https://dl.dropboxusercontent.com/s/eqh8yy0edtdnwr6/villagespawnpoint-fabric_1.18.x-1.8.jar;
+    wget https://dl.dropboxusercontent.com/s/q1nqf3ozn1184p6/collective-fabric-1.18.x-4.26.jar;
   fi
   cd ..;
 fi
@@ -81,9 +82,17 @@ then
 fi
 
 sudo ufw allow 25565;
-sudo add-apt-repository ppa:openjdk-r/ppa;
-sudo apt update;
-sudo apt install openjdk-17-jre-headless;
+if [[ $(command -v java) ]]; then
+    echo "Java already installed, skipping that part.";
+fi
+
+if [![ $(command -v java) ]]; then
+    echo "You haven't installed Java! I'm about to change that.";
+    sudo add-apt-repository ppa:openjdk-r/ppa;
+    sudo apt update;
+    sudo apt install openjdk-17-jre-headless;
+fi
+
 if [ $p = 1 ]
 then
     cd vanilla;
