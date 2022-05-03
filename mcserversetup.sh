@@ -20,8 +20,8 @@ then
   mkdir hyperspeed;
   cd hyperspeed;
   wget https://dl.dropboxusercontent.com/s/9dfosfjhx6ed43j/eula.txt;
-  curl -OJ https://meta.fabricmc.net/v2/versions/loader/1.18.2/0.13.3/0.10.2/server/jar;
-  mv fabric-server-mc.1.18.2-loader.0.13.3-launcher.0.10.2.jar server.jar;
+  curl -OJ https://meta.fabricmc.net/v2/versions/loader/1.18.2/0.14.4/0.10.2/server/jar;
+  mv fabric-server-mc.1.18.2-loader.0.14.4-launcher.0.10.2.jar server.jar;
   mkdir mods;
   cd mods;
   wget https://dl.dropboxusercontent.com/s/40j5zvzunf98drg/hyperserver2.zip;
