@@ -1,5 +1,5 @@
 # Bash-MC-Server-Installer
-This is just a little Bash script I wrote to install a 1.18.2 Minecraft server easily with the choice between 3 presets: Vanilla, Hyperspeed and Enhanced Vanilla. In addition, the script gives you the option to install multiple datapacks to your world.
+This is just a little Bash script I wrote for Ubuntu-based systems to install a 1.18.2 Minecraft server easily with the choice between 3 presets: Vanilla, Hyperspeed and Enhanced Vanilla. In addition, the script gives you the option to install multiple datapacks to your world.
 
 ## Preset Descriptions
 ### Vanilla
